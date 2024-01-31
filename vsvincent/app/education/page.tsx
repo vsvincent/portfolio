@@ -1,15 +1,16 @@
 "use client";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, School2 } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
 const schools = [
 	{
-		icon: <GraduationCap size={20} />,
+		startIcon: <School2 size={20} />,
+		endIcon: <GraduationCap size={20} />,
 		href: "https://www.fontys.nl/en/Study-at-Fontys/Programmes/Information-Communication-Technology-Eindhoven.htm",
-		label: "Fontys University of Applied Science",
-		handle: "SE",
+		name: "Fontys University of Applied Science",
+		degree: "Information and Communication Technology",
 	}
 ];
 
@@ -26,19 +27,28 @@ export default function Example() {
 								target="_blank"
 								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
 							>
-								<span
-									className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
-									aria-hidden="true"
-								/>
-								<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
-									{s.icon}
-								</span>{" "}
+								<div className="flex w-full justify-center items-center">
+									<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+										{s.startIcon}
+									</span>
+
+									<div className="relative flex items-center w-2/4 h-px">
+										<span
+										className="absolute w-full h-px bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
+										aria-hidden="true"
+										/>
+									</div>
+
+									<span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+										{s.endIcon}
+									</span>
+								</div>{" "}
 								<div className="z-10 flex flex-col items-center">
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
-										{s.handle}
+									<span className="lg:text-xl text-center font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
+										{s.degree}
 									</span>
 									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-										{s.label}
+										{s.name}
 									</span>
 								</div>
 							</Link>
