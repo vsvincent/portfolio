@@ -34,7 +34,7 @@ export default function Example() {
 
 									<div className="relative flex items-center w-2/4 h-px">
 										<span
-										className="absolute w-full h-px bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
+										className="absolute w-full h-px bg-gradient-to-r from-zinc-500 via-zinc-500/95 to-transparent"
 										aria-hidden="true"
 										/>
 									</div>
