@@ -13,6 +13,7 @@ const schools = [
 		href: "https://www.fontys.nl/en/Study-at-Fontys/Programmes/Information-Communication-Technology-Eindhoven.htm",
 		name: "Fontys University of Applied Science",
 		degree: "Information and Communication Technology: Software Engineering",
+		level: "Bachelor of Science"
 	}
 ];
 
@@ -52,6 +53,9 @@ export default function Example() {
 								<div className="z-10 flex flex-col items-center">
 									<span className="lg:text-xl text-center font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
 										{s.degree}
+									</span>
+									<span className="mt-4 text-sm text-center duration-1000 text-zinc-200 group-hover:text-zinc-200">
+										{s.level}
 									</span>
 									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.name}
