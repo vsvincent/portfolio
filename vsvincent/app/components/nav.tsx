@@ -16,7 +16,24 @@ export const Navigation: React.FC = () => {
 		observer.observe(ref.current);
 		return () => observer.disconnect();
 	}, []);
-
+const navBarItems = [
+	{
+		link: "/experience",
+		name: "Professional Experience"
+	},
+	{
+		link: "/projects",
+		name: "Projects"
+	},
+	{
+		link: "/education",
+		name: "Education"
+	},
+	{
+		link: "/contact",
+		name: "Contact"
+	},
+];
 	return (
 		<header ref={ref}>
 			<div
@@ -28,18 +45,14 @@ export const Navigation: React.FC = () => {
 			>
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-8">
+						{navBarItems.map((n) => (
 						<Link
-							href="/projects"
+							href={n.link}
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Projects
+							{n.name}
 						</Link>
-						<Link
-							href="/contact"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
-						>
-							Contact
-						</Link>
+						) )}
 					</div>
 
 					<Link
