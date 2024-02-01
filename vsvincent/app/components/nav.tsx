@@ -17,22 +17,11 @@ export const Navigation: React.FC = () => {
 		return () => observer.disconnect();
 	}, []);
 const navBarItems = [
-	{
-		link: "/experience",
-		name: "Professional Experience"
-	},
-	{
-		link: "/projects",
-		name: "Projects"
-	},
-	{
-		link: "/education",
-		name: "Education"
-	},
-	{
-		link: "/contact",
-		name: "Contact"
-	},
+	{ href: "/experience", name: "Professional Experience" },
+	{ href: "/projects", name: "Projects" },
+	{ href: "/education", name: "Education" },
+	{ href: "/contact", name: "Contact" },
+	{ name: "CV", href: "/resume.pdf" },
 ];
 	return (
 		<header ref={ref}>
@@ -47,7 +36,7 @@ const navBarItems = [
 					<div className="flex justify-between gap-8">
 						{navBarItems.map((n) => (
 						<Link
-							href={n.link}
+							href={n.href}
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
 							{n.name}
