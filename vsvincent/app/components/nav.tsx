@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from "react";
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
-	
+	const windowExists = window != null
 	const [windowWidth, setWindowWidth] = useState(window?.innerWidth ?? 0 );
 
 	useEffect(() => {
@@ -16,17 +16,21 @@ export const Navigation: React.FC = () => {
 		);
 		observer.observe(ref.current);
 		const handleResize = () => {
-			if (window != null) {
-				setWindowWidth(window.innerWidth)
-			};
+			if (windowExists){
+			setWindowWidth(window.innerWidth);
+			}
 		  };
 	  
 		  // Add event listener for window resize
-		  window.addEventListener('resize', handleResize);
+		  if (windowExists){
+			 window.addEventListener('resize', handleResize);
+		  }
 	  
 		  // Remove event listener on component unmount
 		  return () => {
-			window.removeEventListener('resize', handleResize);
+			if (windowExists){
+				window.removeEventListener('resize', handleResize);
+			}
 			observer.disconnect();
 		  };
 	}, []);
