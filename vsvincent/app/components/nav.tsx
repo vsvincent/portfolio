@@ -6,8 +6,8 @@ import React, { useEffect, useRef, useState } from "react";
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
-	const windowExists = window != null
-	const [windowWidth, setWindowWidth] = useState(window?.innerWidth ?? 0 );
+	const windowExists = typeof window !== 'undefined'
+	const [windowWidth, setWindowWidth] = windowExists ? useState(window?.innerWidth) : [0, () => null];
 
 	useEffect(() => {
 		if (!ref.current) return;
