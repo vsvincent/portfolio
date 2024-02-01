@@ -6,7 +6,7 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "vsvincent",
+    default: "Vincent von Schilling",
     template: "%s | vsvincent",
   },
   description: "Fresh graduate passionate about all things backend, with a dash of full-stack",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "vonschillingvincent.web.app",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://firebasestorage.googleapis.com/v0/b/vincentvonschilling.appspot.com/o/vfavicon.png?alt=media&token=90a8ce74-7d91-4779-adc0-1df25e8b445c",
         width: 1920,
         height: 1080,
       },
