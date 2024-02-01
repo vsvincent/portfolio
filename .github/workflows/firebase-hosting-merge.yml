@@ -11,6 +11,7 @@ jobs:
       - run: cd ./vsvincent && npm install pnpm -g && npm install && pnpm build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entryPoint: 'vsvincent/firebase.json'
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VINCENTVONSCHILLING }}'
           channelId: live
