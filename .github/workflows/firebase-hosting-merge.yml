@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd ./vsvincent && npm install pnpm -g && npm install && firebase experiments:enable webframeworks && pnpm build
+      - run: cd ./vsvincent && npm install pnpm -g && npm install && pnpm build && npm install firebase && firebase experiments:enable webframeworks
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           entryPoint: './vsvincent/'
