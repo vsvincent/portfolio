@@ -34,7 +34,7 @@ export default function Example() {
 									<div className="flex w-full justify-center items-center">
 										<span className="relative z-10 flex flex-col items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
 											{s.startIcon}
-											<p className="p-1">{s.start}</p>
+											<p className="">{s.start}</p>
 										</span>
 
 										<div className="relative flex items-center w-2/4 h-px">
