@@ -6,7 +6,8 @@ import React, { useEffect, useRef, useState } from "react";
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	
+	const [windowWidth, setWindowWidth] = useState(window?.innerWidth ?? 0 );
 
 	useEffect(() => {
 		if (!ref.current) return;
@@ -15,7 +16,9 @@ export const Navigation: React.FC = () => {
 		);
 		observer.observe(ref.current);
 		const handleResize = () => {
-			setWindowWidth(window.innerWidth);
+			if (window != null) {
+				setWindowWidth(window.innerWidth)
+			};
 		  };
 	  
 		  // Add event listener for window resize
