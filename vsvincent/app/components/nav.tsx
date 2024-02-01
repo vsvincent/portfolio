@@ -1,27 +1,37 @@
 "use client";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Briefcase, AppWindow, GraduationCap, Phone } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 	useEffect(() => {
 		if (!ref.current) return;
 		const observer = new IntersectionObserver(([entry]) =>
 			setIntersecting(entry.isIntersecting),
 		);
-
 		observer.observe(ref.current);
-		return () => observer.disconnect();
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		  };
+	  
+		  // Add event listener for window resize
+		  window.addEventListener('resize', handleResize);
+	  
+		  // Remove event listener on component unmount
+		  return () => {
+			window.removeEventListener('resize', handleResize);
+			observer.disconnect();
+		  };
 	}, []);
 const navBarItems = [
-	{ href: "/experience", name: "Professional Experience" },
-	{ href: "/projects", name: "Projects" },
-	{ href: "/education", name: "Education" },
-	{ href: "/contact", name: "Contact" },
-	{ name: "CV", href: "/resume.pdf" },
+	{ href: "/experience", name: "Experience", altIcon: <Briefcase className="w-6 h-6 duration-200"/>},
+	{ href: "/projects", name: "Projects", altIcon: <AppWindow className="w-6 h-6 duration-200"/> },
+	{ href: "/education", name: "Education", altIcon: <GraduationCap className="w-6 h-6 duration-200"/> },
+	{ href: "/contact", name: "Contact", altIcon: <Phone className="w-6 h-6 duration-200"/> },
 ];
 	return (
 		<header ref={ref}>
@@ -39,9 +49,8 @@ const navBarItems = [
 							href={n.href}
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							{n.name}
-						</Link>
-						) )}
+							{windowWidth < 768 ? n.altIcon : n.name}
+						</Link> ))}
 					</div>
 
 					<Link
