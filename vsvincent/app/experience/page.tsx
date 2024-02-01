@@ -10,8 +10,24 @@ const experiences = [
 		end: "Jan. 2024",
 		href: "https://www.minut.com",
 		role: "Software Engineering Intern",
-		company: "Minut A.B.",
+		company: "Minut",
 		description: "Developed a plan reporting on the sustainability of the company database for future scaling and gave professional advice on potential mitigation strategies. Created a framework to run and visualize performance tests to evaluate the viability of various alternative databases in the context of the enterprise system."
+	},
+	{
+		start: "Feb. 2022",
+		end: "Jun. 2022",
+		href: "https://www.accenture.com",
+		role: "Application Development Intern",
+		company: "Accenture",
+		description: "Developed a webhook-based API for monitoring stock market trading signals using algorithms according to a user’s risk configuration."
+	},
+	{
+		start: "Sep. 2021",
+		end: "Jan. 2022",
+		href: "https://www.actemium.com",
+		role: "Student Worker",
+		company: "Actemium",
+		description: "Developed experience in Industry 4.0 automated manufacturing systems implementing Traksys MES. Led backend development as chairman of 5 member Agile team."
 	}
 ];
 
