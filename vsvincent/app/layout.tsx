@@ -7,15 +7,15 @@ import { Analytics } from "./components/analytics";
 export const metadata: Metadata = {
   title: {
     default: "Vincent von Schilling",
-    template: "%s | vsvincent",
+    template: "%s | vincentvonschilling",
   },
   description: "Fresh graduate passionate about all things backend, with a dash of full-stack",
   openGraph: {
-    title: "vonschillingvincent",
+    title: "vincentvonschilling",
     description:
       "Fresh graduate passionate about all things backend, with a dash of full-stack",
-    url: "vonschillingvincent.web.app",
-    siteName: "vonschillingvincent.web.app",
+    url: "vincentvonschilling.com",
+    siteName: "vincentvonschilling.com",
     images: [
       {
         url: "https://firebasestorage.googleapis.com/v0/b/vincentvonschilling.appspot.com/o/vfavicon.png?alt=media&token=90a8ce74-7d91-4779-adc0-1df25e8b445c",
