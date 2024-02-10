@@ -1,10 +1,8 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
 	path: {
 		type: "string",
