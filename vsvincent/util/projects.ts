@@ -16,9 +16,17 @@ export interface Project {
         title: 'Isnad.app',
         imageUrl: '/images/project1.jpg',
         description: 'A web project recording chains of transmission and their transmitters, particularly in the English language.',
-        markdown: `## Why Isnad
-Isnad will allow users to help create a graph-based map of Hadith transmission chains as well as their transmitters and information relevant to them.
-Hadith are narrations or sayings attributed to the Prophet Muhammad, which are crucial in Islamic jurisprudence and theology. The authenticity and reliability of Hadith are determined in part by the chain of transmission (isnad) through which they were passed down.`,
+markdown: 
+`
+# What are Hadith
+Hadith are narrations or sayings attributed to the Prophet Muhammad, which are crucial in Islamic jurisprudence and elaborating details of creed. The authenticity and reliability of Hadith are determined in part by the chain of transmission (isnad) through which they were passed down.
+## Why Isnad
+Isnad will provide users with tools to create and explore graph-based maps of these transmission chains. This includes visualizing the connections between various narrators (transmitters) and the Hadith they transmitted. Additionally, the software may incorporate features for annotating and analyzing the reliability, context, and other pertinent information related to each transmitter and Hadith.
+
+Isnad will be an invaluable tool for scholars, researchers, and students of Islamic studies, Hadith studies, and comparative religion. By offering a structured and visually intuitive way to examine the intricate networks of transmission, users can gain deeper insights into the authenticity and historical context of Hadith literature. This could aid in academic research, teaching, and discussions surrounding the interpretation and application of Hadith in contemporary contexts.
+
+Furthermore, Isnad might also appeal to Islamic scholars, imams, and educators who seek to elucidate the complex narratives of Hadith for their congregations or students. By leveraging technology to organize and present this information, the software could enhance the understanding and appreciation of Hadith literature within diverse communities.
+`,
         published: true,
         date: new Date('2023-12-01'),
         repository: 'vsvincent/isnad-backend',
