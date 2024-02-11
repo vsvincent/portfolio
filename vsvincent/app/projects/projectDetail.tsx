@@ -15,7 +15,7 @@ type Props = {
 
 export const ProjectDetail: React.FC<Props> = ({ project, views, setProject }) => {
 	return (
-		<div className="flex h-screen flex-col">
+		<div className="flex h-screen flex-col text-wrap">
 		<ProjectHeader project={project} views={views} setProject={setProject}/>
 		<ProjectBody project={project} views={views} setProject={setProject}/>
 		</div>
