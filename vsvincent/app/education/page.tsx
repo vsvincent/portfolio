@@ -17,7 +17,7 @@ const schools = [
 	}
 ];
 
-export default function Example() {
+export default function Education() {
 	return (
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />

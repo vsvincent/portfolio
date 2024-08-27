@@ -6,6 +6,13 @@ import { Card } from "../components/card";
 
 const experiences = [
 	{
+		start: "Mar. 2024",
+		href: "https://www.mediatool.com",
+		role: "Full-Stack Developer",
+		company: "Mediatool",
+		description: "Overhauled and upgraded core user-facing frontend components for the company’s SaaS campaign management platform. Developed backend components in an event-sourced, functional programming-oriented API to support the company’s SaaS platform along with comprehensive acceptance and unit testing suites."
+	},
+	{
 		start: "Sep. 2023",
 		end: "Jan. 2024",
 		href: "https://www.minut.com",
@@ -31,11 +38,11 @@ const experiences = [
 	}
 ];
 
-export default function Example() {
+export default function Experience() {
 	return (
-		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0 flex flex-col">
 			<Navigation />
-			<div className="container overflow-y-auto flex items-center justify-center min-h-screen px-4 mx-auto">
+			<div className="container overflow-y-auto flex items-center justify-center min-h-screen px-4 mx-auto xl:mt-24">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 xl:mt-0 lg:grid-cols-3 lg:gap-16">
 					{experiences.map((e) => (
 						<Card>
@@ -59,10 +66,10 @@ export default function Example() {
 											/>
 										</div>
 
-										<span className="text-center p-7 relative z-10 flex flex-col items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+										{e.end && (<span className="text-center p-7 relative z-10 flex flex-col items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
 											
 											<p className="">{e.end}</p>
-										</span>
+										</span>)}
 									</div>{" "}
 								</div>
 								<div className="z-10 flex flex-col items-center">
