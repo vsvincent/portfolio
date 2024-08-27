@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     default: "Vincent von Schilling",
     template: "%s | vincentvonschilling",
   },
-  description: "Fresh graduate passionate about all things backend, with a dash of full-stack",
+  description: "Full-stack developer passionate about FP, Cloud, and OOP",
   openGraph: {
     title: "vincentvonschilling",
     description:
-      "Fresh graduate passionate about all things backend, with a dash of full-stack",
+      "Full-stack developer passionate about FP, Cloud, and OOP",
     url: "vincentvonschilling.com",
     siteName: "vincentvonschilling.com",
     images: [
