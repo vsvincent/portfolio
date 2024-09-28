@@ -1,5 +1,5 @@
 "use client";
-import { ArrowLeft, Briefcase, AppWindow, GraduationCap, Phone } from "lucide-react";
+import { ArrowLeft, Briefcase, AppWindow, GraduationCap, Phone, FileCheck2, FileText } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -35,10 +35,11 @@ export const Navigation: React.FC = () => {
 		  };
 	}, []);
 const navBarItems = [
-	{ href: "/experience", name: "Experience", altIcon: <Briefcase className="w-6 h-6 duration-200"/>},
-	{ href: "/projects", name: "Projects", altIcon: <AppWindow className="w-6 h-6 duration-200"/> },
-	{ href: "/education", name: "Education", altIcon: <GraduationCap className="w-6 h-6 duration-200"/> },
-	{ href: "/contact", name: "Contact", altIcon: <Phone className="w-6 h-6 duration-200"/> },
+	{ href: "/experience", name: "Experience", altIcon: <Briefcase className="nav-bar-item-alt"/>},
+	// { href: "/projects", name: "Projects", altIcon: <AppWindow className="nav-bar-item-alt"/> },
+	{ href: "/education", name: "Education", altIcon: <GraduationCap className="nav-bar-item-alt"/> },
+	{ href: "/contact", name: "Contact", altIcon: <Phone className="nav-bar-item-alt"/> },
+	{ href: "/resume.pdf", name: "CV", altIcon: <FileText className="nav-bar-item-alt"/>},
 ];
 	return (
 		<header ref={ref}>
