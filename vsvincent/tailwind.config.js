@@ -84,12 +84,12 @@ module.exports = {
 				},
 				title: {
 					"0%": {
-						"line-height": "0%",
+						"line-height": "100%",
 						"letter-spacing": "0.25em",
 						opacity: "0",
 					},
 					"25%": {
-						"line-height": "0%",
+						"line-height": "100%",
 						opacity: "0%",
 					},
 					"80%": {

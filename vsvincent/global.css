@@ -9,7 +9,9 @@
   .bg-teal {
     --tw-bg-opacity: 1;
     background-color: rgb(45,73,89 / var(--tw-bg-opacity));
-  } 
-  
+  }
+  .nav-bar-item-alt {
+    @apply w-6 h-6 duration-200
+  }
 } 
 
